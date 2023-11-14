@@ -8,7 +8,7 @@ function Modal() {
   return (
     <div className="modal-wrap">
       <button onClick={() => setOpen(true)} className="open-modal-btn">
-        ✨ Открыть окно
+        ✨ Відкрити модалку
       </button>
       <ModalWindow open={open} setOpen={setOpen}>
         <img

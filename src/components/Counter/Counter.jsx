@@ -15,10 +15,10 @@ function Counter() {
   return (
     <div className="counter">
       <div>
-        <h2>Счетчик:</h2>
+        <h2>Лічильник:</h2>
         <p>{count}</p>
         <button onClick={onMinusPlus} className="minus">
-          - Минус
+          - Мінус
         </button>
         <button onClick={onClickPlus} className="plus">
           Плюс +

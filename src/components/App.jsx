@@ -4,6 +4,7 @@ import { lazy } from 'react';
 
 const Counter = lazy(() => import('./Pages/Counter'));
 const Modal = lazy(() => import('./Pages/Modal'));
+const Quiz = lazy(() => import('./Pages/Quiz'));
 
 export const App = () => {
   return (
@@ -11,6 +12,7 @@ export const App = () => {
       <Route path="/" element={<SharedLayout />}>
         <Route index element={<Counter />} />
         <Route path="modal" element={<Modal />} />
+        <Route path="quiz" element={<Quiz />} />
       </Route>
     </Routes>
   );

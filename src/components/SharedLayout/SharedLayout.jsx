@@ -13,6 +13,9 @@ export const SharedLayout = () => {
           <Link to="/modal" end>
             Modal
           </Link>
+          <Link to="/quiz" end>
+            Quiz
+          </Link>
         </Nav>
       </Header>
       <Suspense fallback={<div>Loading...</div>}>
