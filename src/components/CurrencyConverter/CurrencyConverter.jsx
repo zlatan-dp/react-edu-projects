@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useCallback } from 'react';
 import { Block } from './Block';
 import './CurrencyConverter.scss';
 
@@ -23,21 +23,43 @@ function CurrencyConverterApp() {
 
   const ratesRef = useRef({});
 
-  const onChangeFromPrice = value => {
-    const price = value / ratesRef.current['USD' + fromCurrency];
-    const result = price * ratesRef.current['USD' + toCurrency];
-    setToPrice(result.toFixed(3));
-    setFromPrice(value);
-  };
+  //   const onChangeFromPrice = value => {
+  //     const price = value / ratesRef.current['USD' + fromCurrency];
+  //     const result = price * ratesRef.current['USD' + toCurrency];
+  //     setToPrice(result.toFixed(3));
+  //     setFromPrice(value);
+  //   };
 
-  const onChangeToPrice = value => {
-    const result =
-      (ratesRef.current['USD' + fromCurrency] /
-        ratesRef.current['USD' + toCurrency]) *
-      value;
-    setFromPrice(result.toFixed(3));
-    setToPrice(value);
-  };
+  //   const onChangeToPrice = value => {
+  //     const result =
+  //       (ratesRef.current['USD' + fromCurrency] /
+  //         ratesRef.current['USD' + toCurrency]) *
+  //       value;
+  //     setFromPrice(result.toFixed(3));
+  //     setToPrice(value);
+  //   };
+
+  const onChangeFromPrice = useCallback(
+    value => {
+      const price = value / ratesRef.current['USD' + fromCurrency];
+      const result = price * ratesRef.current['USD' + toCurrency];
+      setToPrice(result.toFixed(3));
+      setFromPrice(value);
+    },
+    [fromCurrency, toCurrency]
+  );
+
+  const onChangeToPrice = useCallback(
+    value => {
+      const result =
+        (ratesRef.current['USD' + fromCurrency] /
+          ratesRef.current['USD' + toCurrency]) *
+        value;
+      setFromPrice(result.toFixed(3));
+      setToPrice(value);
+    },
+    [fromCurrency, toCurrency]
+  );
 
   useEffect(() => {
     async function fetchExchangeRates() {
@@ -51,22 +73,25 @@ function CurrencyConverterApp() {
         ratesRef.current = { ...json.quotes, USDUSD: 1 };
         onChangeToPrice(1);
         setIsLoad(true);
+        console.log(json.quotes);
       } catch (error) {
         console.error('Error fetching exchange rates:', error);
         alert('Не вдалося отримати інформацію');
       }
     }
 
-    fetchExchangeRates(); // Включаємо функцію в залежності useEffect
-  }, []);
+    if (!isLoad) {
+      fetchExchangeRates();
+    }
+  }, [onChangeToPrice, isLoad]);
 
   useEffect(() => {
     onChangeFromPrice(fromPrice);
-  }, [fromCurrency]);
+  }, [fromPrice, fromCurrency, onChangeFromPrice]);
 
   useEffect(() => {
     onChangeToPrice(toPrice);
-  }, [toCurrency]);
+  }, [toPrice, toCurrency, onChangeToPrice]);
 
   return isLoad ? (
     <div className="ConverterApp">
