@@ -1,32 +1,36 @@
 {
   "files": {
     "main.css": "/react-edu-projects/static/css/main.7acaea2f.css",
-    "main.js": "/react-edu-projects/static/js/main.42d2f627.js",
+    "main.js": "/react-edu-projects/static/js/main.3cb3f330.js",
     "static/css/411.8aeb7cde.chunk.css": "/react-edu-projects/static/css/411.8aeb7cde.chunk.css",
     "static/js/411.18ee42a6.chunk.js": "/react-edu-projects/static/js/411.18ee42a6.chunk.js",
     "static/css/535.ffff2997.chunk.css": "/react-edu-projects/static/css/535.ffff2997.chunk.css",
     "static/js/535.c540a4d5.chunk.js": "/react-edu-projects/static/js/535.c540a4d5.chunk.js",
     "static/css/167.a3a71b94.chunk.css": "/react-edu-projects/static/css/167.a3a71b94.chunk.css",
     "static/js/167.bc1ea148.chunk.js": "/react-edu-projects/static/js/167.bc1ea148.chunk.js",
-    "static/css/992.ea99403c.chunk.css": "/react-edu-projects/static/css/992.ea99403c.chunk.css",
-    "static/js/992.284ea77c.chunk.js": "/react-edu-projects/static/js/992.284ea77c.chunk.js",
+    "static/css/4.d9b4affd.chunk.css": "/react-edu-projects/static/css/4.d9b4affd.chunk.css",
+    "static/js/4.56aafad1.chunk.js": "/react-edu-projects/static/js/4.56aafad1.chunk.js",
+    "static/css/886.306eb6d1.chunk.css": "/react-edu-projects/static/css/886.306eb6d1.chunk.css",
+    "static/js/886.e1d5bbd1.chunk.js": "/react-edu-projects/static/js/886.e1d5bbd1.chunk.js",
     "static/media/success.svg": "/react-edu-projects/static/media/success.4e08f49e92f6329b379e8b6827203a42.svg",
     "index.html": "/react-edu-projects/index.html",
     "static/media/plus.svg": "/react-edu-projects/static/media/plus.1931cf72fa3019e723886b136ffe0eee.svg",
     "static/media/minus.svg": "/react-edu-projects/static/media/minus.494f644a0286985edebe0fb3f79390a0.svg",
     "main.7acaea2f.css.map": "/react-edu-projects/static/css/main.7acaea2f.css.map",
-    "main.42d2f627.js.map": "/react-edu-projects/static/js/main.42d2f627.js.map",
+    "main.3cb3f330.js.map": "/react-edu-projects/static/js/main.3cb3f330.js.map",
     "411.8aeb7cde.chunk.css.map": "/react-edu-projects/static/css/411.8aeb7cde.chunk.css.map",
     "411.18ee42a6.chunk.js.map": "/react-edu-projects/static/js/411.18ee42a6.chunk.js.map",
     "535.ffff2997.chunk.css.map": "/react-edu-projects/static/css/535.ffff2997.chunk.css.map",
     "535.c540a4d5.chunk.js.map": "/react-edu-projects/static/js/535.c540a4d5.chunk.js.map",
     "167.a3a71b94.chunk.css.map": "/react-edu-projects/static/css/167.a3a71b94.chunk.css.map",
     "167.bc1ea148.chunk.js.map": "/react-edu-projects/static/js/167.bc1ea148.chunk.js.map",
-    "992.ea99403c.chunk.css.map": "/react-edu-projects/static/css/992.ea99403c.chunk.css.map",
-    "992.284ea77c.chunk.js.map": "/react-edu-projects/static/js/992.284ea77c.chunk.js.map"
+    "4.d9b4affd.chunk.css.map": "/react-edu-projects/static/css/4.d9b4affd.chunk.css.map",
+    "4.56aafad1.chunk.js.map": "/react-edu-projects/static/js/4.56aafad1.chunk.js.map",
+    "886.306eb6d1.chunk.css.map": "/react-edu-projects/static/css/886.306eb6d1.chunk.css.map",
+    "886.e1d5bbd1.chunk.js.map": "/react-edu-projects/static/js/886.e1d5bbd1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.42d2f627.js"
+    "static/js/main.3cb3f330.js"
   ]
 }
