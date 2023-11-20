@@ -19,6 +19,9 @@ export const SharedLayout = () => {
           <Link to="/users" end>
             Users
           </Link>
+          <Link to="/converter" end>
+            Currency Converter
+          </Link>
         </Nav>
       </Header>
       <Suspense fallback={<div>Loading...</div>}>
