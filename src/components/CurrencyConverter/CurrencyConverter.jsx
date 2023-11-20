@@ -43,7 +43,7 @@ function CurrencyConverterApp() {
     value => {
       const price = value / ratesRef.current['USD' + fromCurrency];
       const result = price * ratesRef.current['USD' + toCurrency];
-      setToPrice(result.toFixed(3));
+      setToPrice(Number(result.toFixed(3)));
       setFromPrice(value);
     },
     [fromCurrency, toCurrency]
@@ -55,7 +55,7 @@ function CurrencyConverterApp() {
         (ratesRef.current['USD' + fromCurrency] /
           ratesRef.current['USD' + toCurrency]) *
         value;
-      setFromPrice(result.toFixed(3));
+      setFromPrice(Number(result.toFixed(3)));
       setToPrice(value);
     },
     [fromCurrency, toCurrency]
@@ -89,9 +89,9 @@ function CurrencyConverterApp() {
     onChangeFromPrice(fromPrice);
   }, [fromPrice, fromCurrency, onChangeFromPrice]);
 
-  useEffect(() => {
-    onChangeToPrice(toPrice);
-  }, [toPrice, toCurrency, onChangeToPrice]);
+  //   useEffect(() => {
+  //     onChangeToPrice(toPrice);
+  //   }, [toPrice, toCurrency, onChangeToPrice]);
 
   return isLoad ? (
     <div className="ConverterApp">
