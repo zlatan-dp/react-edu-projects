@@ -7,6 +7,7 @@ const Modal = lazy(() => import('./Pages/Modal'));
 const Quiz = lazy(() => import('./Pages/Quiz'));
 const Users = lazy(() => import('./Pages/Users'));
 const CurrencyConverter = lazy(() => import('./Pages/CurrencyConverter'));
+const Photos = lazy(() => import('./Pages/Photo'));
 
 export const App = () => {
   return (
@@ -17,6 +18,7 @@ export const App = () => {
         <Route path="quiz" element={<Quiz />} />
         <Route path="users" element={<Users />} />
         <Route path="converter" element={<CurrencyConverter />} />
+        <Route path="photo" element={<Photos />} />
       </Route>
     </Routes>
   );
